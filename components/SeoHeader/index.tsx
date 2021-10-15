@@ -3,27 +3,27 @@ import { useRouter } from 'next/dist/client/router';
 
 export default function SeoHeader(): JSX.Element {
   const title = 'H1 Web Development';
-  const desc = 'H1 Web Development';
+  const description = 'H1 Web Development';
   const ogImgRelativePath = '/og.png';
 
   const siteURL = 'https://brianhaan.me';
   const ogImageURL = `${siteURL}${ogImgRelativePath}`;
   const pathName = useRouter().pathname;
-  const pageURL = pathName === '/' ? siteURL : siteURL + pathName;
+  const url = pathName === '/' ? siteURL : siteURL + pathName;
   const twitterHandle = '@brianchaan';
   const siteName = 'brianhaan.me';
 
   return (
     <NextSeo
       title={title}
-      description={desc}
-      canonical={pageURL}
+      description={description}
+      canonical={url}
       openGraph={{
         type: 'website',
         locale: 'en_US',
-        url: pageURL,
+        url,
         title,
-        description: desc,
+        description,
         images: [
           {
             url: ogImageURL,
