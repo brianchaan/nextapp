@@ -21,7 +21,7 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "importHelpers": true,
     "allowSyntheticDefaultImports": true,
