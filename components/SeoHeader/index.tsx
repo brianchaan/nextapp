@@ -29,7 +29,7 @@ export default function SeoHeader(): JSX.Element {
             url: ogImageURL,
             width: 1200,
             height: 630,
-            alt: 'Gourav.io - personal site and blog',
+            alt: 'brianhaan.me - H1 Web Development',
           },
         ],
         site_name: siteName,

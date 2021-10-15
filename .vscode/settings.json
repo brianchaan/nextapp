@@ -5,8 +5,5 @@
   "editor.formatOnSave": true,
   "editor.wrappingIndent": "indent",
   "editor.detectIndentation": false,
-  "typescript.suggest.autoImports": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  }
+  "typescript.suggest.autoImports": true
 }
