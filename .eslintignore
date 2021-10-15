@@ -8,3 +8,5 @@ coverage
 *.scss
 **/out/*
 next-env.d.ts
+postcss.config.js
+tailwind.config.js
