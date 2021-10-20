@@ -1,12 +1,20 @@
 import React, { ReactElement } from 'react';
 import NavigationLayout from '@/layouts/NavigationLayout';
 import { SeoHeaderProps } from '@/components/SeoHeader';
+import ContainerLayout from '@/layouts/ContainerLayout';
 
 export default function About() {
   return (
-    <>
-      <div className="p-10">About page</div>
-    </>
+    <ContainerLayout>
+      <div className="page">
+        <div
+          className="flex align-center justify-center p-4 rounded bg-gray-100 text-center"
+          style={{ height: '200px', width: '100%' }}
+        >
+          About Page
+        </div>
+      </div>
+    </ContainerLayout>
   );
 }
 

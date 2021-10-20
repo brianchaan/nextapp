@@ -4,7 +4,6 @@
     "bradlc.vscode-tailwindcss",
     "aaron-bond.better-comments",
     "dsznajder.es7-react-js-snippets",
-    "dbaeumer.vscode-eslint",
-    "formulahendry.auto-rename-tag"
+    "dbaeumer.vscode-eslint"
   ]
 }

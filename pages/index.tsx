@@ -4,15 +4,7 @@ import NavigationLayout from '@/layouts/NavigationLayout';
 export default function Home() {
   return (
     <>
-      <div>Home page</div>
-      <div
-        style={{
-          width: '50px',
-          backgroundColor: 'blue',
-        }}
-      >
-        <a>Testlinktestlink</a>
-      </div>
+      <strong>Home page</strong>
     </>
   );
 }
