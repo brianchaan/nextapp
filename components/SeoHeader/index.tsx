@@ -1,13 +1,19 @@
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/dist/client/router';
 
-export default function SeoHeader(): JSX.Element {
-  const title = 'H1 Web Development';
-  const description = 'H1 Web Development';
-  const ogImgRelativePath = '/og.png';
+export interface SeoHeaderProps {
+  title?: string;
+  description?: string;
+  image?: string;
+}
 
+const SeoHeader: React.FC<SeoHeaderProps> = ({
+  title = 'H1 Web Developer',
+  description = 'H1 Web Development',
+  image = 'og.png',
+}): JSX.Element => {
   const siteURL = 'https://brianhaan.me';
-  const ogImageURL = `${siteURL}${ogImgRelativePath}`;
+  const openGraphImageUrl = `${siteURL}${image}`;
   const pathName = useRouter().pathname;
   const url = pathName === '/' ? siteURL : siteURL + pathName;
   const twitterHandle = '@brianchaan';
@@ -26,7 +32,7 @@ export default function SeoHeader(): JSX.Element {
         description,
         images: [
           {
-            url: ogImageURL,
+            url: openGraphImageUrl,
             width: 1200,
             height: 630,
             alt: 'brianhaan.me - H1 Web Development',
@@ -53,4 +59,6 @@ export default function SeoHeader(): JSX.Element {
       ]}
     />
   );
-}
+};
+
+export default SeoHeader;

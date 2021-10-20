@@ -2,6 +2,9 @@
   "recommendations": [
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
-    "aaron-bond.better-comments"
+    "aaron-bond.better-comments",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-rename-tag"
   ]
 }

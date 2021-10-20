@@ -1,25 +1,22 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import SeoHeader from '@/components/SeoHeader';
-// import styles from '@/styles/Home.module.scss';
+import React, { ReactElement } from 'react';
+import NavigationLayout from '@/layouts/NavigationLayout';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
-      <SeoHeader></SeoHeader>
-      <Head>
-        <title>H1 Web Development</title>
-        <meta name="description" content="Test" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <header></header>
-
-      <main></main>
-
-      <footer></footer>
+      <div>Home page</div>
+      <div
+        style={{
+          width: '50px',
+          backgroundColor: 'blue',
+        }}
+      >
+        <a>Testlinktestlink</a>
+      </div>
     </>
   );
-};
+}
 
-export default Home;
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <NavigationLayout>{page}</NavigationLayout>;
+};

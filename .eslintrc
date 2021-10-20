@@ -44,6 +44,7 @@
   "rules": {
     "semi": ["error", "always"],
     "indent": ["error", 2],
-    "no-console": 1
+    "no-console": 1,
+    "@typescript-eslint/no-empty-interface": 1
   }
 }
