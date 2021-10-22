@@ -4,8 +4,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   padding: 0;
   margin: 0;
   font-family: var(--text-font);
@@ -47,4 +46,23 @@ pre {
 
 .page {
   padding: var(--gap) 0;
+}
+
+.gap {
+  &-left {
+    padding-left: var(--gap);
+  }
+  &-right {
+    padding-right: var(--gap);
+  }
+  &-top {
+    padding-top: var(--gap);
+  }
+  &-bottom {
+    padding-bottom: var(--gap);
+  }
+}
+
+::selection {
+  background: var(--brand-color-light);
 }

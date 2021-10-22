@@ -1,9 +1,11 @@
 import '@/styles/tailwind.css';
 import '@/styles/globals.scss';
+import { MantineProvider } from '@mantine/core';
 import type { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import SeoHeader, { SeoHeaderProps } from '@/components/SeoHeader';
+import NavigationLayout from '@/layouts/NavigationLayout';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -14,14 +16,20 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => page);
+const defaultLayout = (page: ReactElement) => {
+  return <NavigationLayout>{page}</NavigationLayout>;
+};
+
+export default function App({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? defaultLayout;
   const seoProps = Component.getSeo ? Component.getSeo() : {};
 
   return getLayout(
     <>
       <SeoHeader {...seoProps} />
-      <Component {...pageProps} />
+      <MantineProvider>
+        <Component {...pageProps} />
+      </MantineProvider>
     </>
   );
 }

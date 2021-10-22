@@ -13,6 +13,13 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
+    "@mantine/core": "^3.0.5",
+    "@mantine/dates": "^3.0.5",
+    "@mantine/dropzone": "^3.0.5",
+    "@mantine/hooks": "^3.0.5",
+    "@mantine/notifications": "^3.0.5",
+    "@mantine/rte": "^3.0.5",
+    "dayjs": "^1.10.7",
     "next": "11.1.2",
     "next-seo": "^4.28.1",
     "react": "17.0.2",
